@@ -7,21 +7,61 @@ body {
   width: 400px;
   background: #fff;
   margin: 16px auto;
+  padding: 8px;
+  /*Creates padding between our inside blocks and the edge of the card */
 }
 
 .title {
   background: #e3f4ff;
+  font-size: 16px;
+  padding: 8px;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  /*Since there is already 8px of padding at the top from .card
+  there is no need for top margin for the first block. Similar concept for
+  side margins but it applies for each block. Only need bottom margin for this
+  block to ensure that there is margin between the blocks
+  */
 }
 
 .content {
   background: #e3f4ff;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-bottom: 8px;
+  /*Technically we need a top and bot margin of 8px but since we already wrote
+  bot margin 8px for the block above, we don't need to write top-margin */
 }
 
 .button-container {
   background: #e3f4ff;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
 }
 
 button {
   background: white;
   border: 1px solid #eee;
+  text-align: center;
+ 
+  padding: 8px 24px;
+  /* same thing as
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
+  */
+
+  display: block;
+  margin: 0 auto; 
+  /* block display so that we can respect our width/height and write on the next line
+  (no inline-block
+
+  margin of 0 auto to center in the middle of the screen with 0 marign, yea its kinda weird 
+  */
+  
 }
