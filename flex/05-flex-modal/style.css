@@ -20,7 +20,16 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+
+  /*Made the modal (big white block) into a flex container
+  added gap between the two items (.icon and .container)
+  added padding (white space) around the two items
+  */
+  display: flex;
+  padding: 16px;
+  gap: 16px;
 }
+
 
 .icon {
   color: royalblue;
@@ -33,6 +42,55 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /*Made the flex-shrink 0 so that the image would not shrink and get smooshed*/
+  flex-shrink: 0;
+}
+
+.container{
+  /*Made our .container item into a flex container
+  made its flex-direction to be column (vertical) so that all its items would stack on top of each other
+  top
+  text
+  buttons
+  */
+  display:flex;
+  flex-direction: column;
+}
+
+.top{
+  /*Made our .top item into also a flex container(.header .closebutton)
+  aligned the items in the vertical center of the container
+  made sure to make the two items have the most space between since there are only two items
+  they each went to the opposite sizes
+
+  then just adjusted the font and boldness of the header and made sure to add some margin at the bottom
+  to seperate it from the next flex item/container in .container*/
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.text{
+  /*Just added some margin between our text and buttons */
+  margin-bottom: 16px;
+}
+
+.buttons{
+  /*Created our buttons container and added some gap between thw two buttons
+  BTW this part was completely unnecessary cause the buttons turned out fine without
+  having to make this container. But it does help visualize the concept of what I did
+  Make two flex items (.icon and .container)
+  and .container would be a vertical container with our other stuff stacked 
+  1. top (.header and .close-button)
+  2. text
+  3. buttons (.confirm and .cancel)
+  */
+  display:flex;
+  gap: 10px;
 }
 
 .close-button {
