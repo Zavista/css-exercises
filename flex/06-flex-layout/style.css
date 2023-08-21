@@ -5,6 +5,19 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+
+  /*Make our entire page into a flex container and we will have it be a vertical container
+  1. header (two .ul lists)
+  2. content 
+  3. footer
+
+  the space-between allows us to have our header and footer at the top and bottom
+  while our content is right in the middle b/c of the way space-between
+  distributes the space
+  */
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 img {
@@ -16,6 +29,9 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+
+  /*Added some padding to the buttons*/
+  padding: 10px;
 }
 
 input {
@@ -24,4 +40,55 @@ input {
   padding: 8px 24px;
   width: 400px;
   margin-bottom: 16px;
+}
+
+
+/*Created a flex container for our header
+the space-between allows us to have each flex item (.ul list) at each ends
+align-items make sure we are at the vertical center of the flex container
+padding adds some space between the text and the page border
+*/
+.header { 
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+/*The footer is the exact same as our header with just the addition of the background color*/
+.footer{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #eeeeee;
+}
+
+/*Made each of our ul also into a flex container for its list items
+THis also allows the list to be horizontal btw.
+list-stye-type: allows us to remove the bullets
+we set margin and padding to 0 b/c we don't need them and ul initalizes them to a non-zero num (idk)
+gap between each list flex item
+*/
+ul{
+  display: flex;
+  list-style-type: none; /*Removes the list bullets*/
+  margin:  0;
+  padding: 0;
+  gap: 16px;
+}
+
+/*Create the .content flex container and have it at the center of the container
+also have its direction be column so that all the contents stack on top of each other*/
+.content{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*changed the link colors and removed the underline*/
+a{
+  color: #383836;
+  text-decoration: none;
 }
