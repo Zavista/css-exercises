@@ -2,28 +2,108 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+
+  /*The body is the entire page and we can think of this as our final flex container
+  that contains all the other flex items.
+  Make it into a flex container and have it be vertical so all our other containers and items
+  stack on top of each other
+  1. header
+  2. contents (sidebar + cards
+  3. footer*/ 
+  display: flex;
+  flex-direction: column;  
 }
+
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+
+  /*Make it a flex display so we can easily adjust the text and move it to the side.
+  Adjust the font-size and weight and add padding to the left so there is space
+  between text and wall
+  
+  Note: we need this to be a flex container so that the background doesn't just stop with the text
+  but instead as a seperate container where the text is just one item
+  This allows the background to cover the entire screen*/
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+
+  /*Make it a flex display so we can easily adjust the text and similar idea
+  to the .header on the reasion for flex*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+
+/*Create the flex container for the contents(.sidebar and .card-container)
+set its flex-grow to 1 (0 is default) so that it can grow to cover all remaining space*/
+.contents{
+  display: flex;
+  flex-grow: 1;
+}
+
 
 .sidebar {
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
+
+  /*Add padding and make its flex-shrink 0 so it does not shrink*/
+  padding: 16px;
+  flex-shrink: 0;
+
+}
+
+/*Remove the bullet points and remove the in-built ul margin and padding*/
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*Add margins between each list item in the ul*/
+li{
+  margin-bottom: 16px;
+}
+
+/*Changes link color and size while removing the underline*/
+a{
+  color: white;
+  font-size: 24px;
+  text-decoration:  none;
+}
+
+/*Create a flex container to contain the cards
+Add a padding around each flex item (card) 
+Use flex-wrap so that instead of shrinking, the flex items would just
+move onto the next row/column when screen shrinks*/
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 32px;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+
+  /*Set the padding for the text within the card and also the margin between each card
+  also set a width for each card*/
+  padding: 16px;
+  margin: 16px;
+  width: 300px;
+
 }
