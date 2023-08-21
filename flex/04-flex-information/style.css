@@ -1,6 +1,8 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
 }
+/*with this text-align: center, all the images and texts are centered*/
 
 img {
   width: 100px;
@@ -10,7 +12,51 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  margin-bottom: 32px;
 }
+/*creates a 32px gap between title and contents*/
+
+.information{
+  display:flex;
+  justify-content: center;
+  gap: 52px;
+}
+/*initializes the flex items to be in the center then manually add a 52px gap bewteen each item*/
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+/*with this text-align: center, all the images and texts are centered*/
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 32px;
+}
+/*creates a 32px gap between title and contents*/
+
+.information{
+  display:flex;
+  justify-content: center;
+  gap: 52px;
+}
+/*initializes the flex items to be in the center then manually add a 52px gap bewteen each item*/
+
+
+.barberry-info .chili-info .pepper-info .saffron-info{
+  max-width:  200px;
+}
+/*we  could have just used the same class for all of them next time*/
+/*we use max-width to limit the max width that the flex can have which means that if the text exceeds that width
+it will just go onto the next line*/
+/*Note: this max-width will only limit the size of the image. The text can still take up one long line if screen size permits*/
+
 
 /* do not edit this footer */
 .footer {
@@ -24,3 +70,21 @@ img {
   justify-content: center;
   background: #eee;
 }
+
+
+
+
+
+/* do not edit this footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+}
+
