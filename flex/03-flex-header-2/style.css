@@ -23,12 +23,14 @@ body {
 .left-items{
   display: flex;
   gap: 16px;
+  margin-left: 25px;
 }
 
 .right-items{
   display: flex;
   gap: 16px;
   justify-content: flex-end;
+  margin-right: 25px;
 }
 
 

@@ -23,31 +23,6 @@ img {
 }
 /*initializes the flex items to be in the center then manually add a 52px gap bewteen each item*/
 
-body {
-  font-family: 'Courier New', Courier, monospace;
-  text-align: center;
-}
-/*with this text-align: center, all the images and texts are centered*/
-
-img {
-  width: 100px;
-  height: 100px;
-}
-
-.title {
-  font-size: 36px;
-  font-weight: 900;
-  margin-bottom: 32px;
-}
-/*creates a 32px gap between title and contents*/
-
-.information{
-  display:flex;
-  justify-content: center;
-  gap: 52px;
-}
-/*initializes the flex items to be in the center then manually add a 52px gap bewteen each item*/
-
 
 .barberry-info .chili-info .pepper-info .saffron-info{
   max-width:  200px;
