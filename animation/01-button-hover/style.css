@@ -16,4 +16,12 @@ button {
   font-size: 18px;
   padding: 16px 24px;
   text-align: center;
+
+  /* */
+  transition: transform 0.5s ease-out;
+}
+
+/* */
+button:hover{
+  transform:scale(1.15) /* basically scales everything up by 15%*/
 }

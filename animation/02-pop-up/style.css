@@ -61,3 +61,16 @@ button {
 .backdrop.show {
   opacity: 30%;
 }
+
+
+/* */
+.popup-modal {
+  transition: transform 2s ease-in-out, opacity 0.4s ease;
+  transform: translate(-50%, -100%); /* update our initial popup-modal to be at the top of the div containing it*/
+  /*this transition occurs when transform is changed. So when we add .show */
+}
+
+
+.popup-modal.show {
+  transform: translate(-50%, -50%);
+}

@@ -30,3 +30,24 @@ ul.dropdown-menu li:hover {
 }
 
 
+/* */
+.visible { 
+  animation: expand 500ms ease-in-out; /*this animation is triggered whenever this class is added to an element*/
+  /*if you want to also have the animation occur when removed, can use another class like hidden*/
+  transform-origin: top; /*element will start from its top edge*/
+}
+
+@keyframes expand { /* expand animation we made */
+  0% {
+    transform: scaleY(0); /*menu starts combined*/
+  }
+
+  70% {
+    transform: scaleY(1.1); /*reaches 1.1x the size*/
+  }
+  
+  100% {
+    transform: scaleY(1); /*returns back to 1x, causing the "bounce"*/
+  }
+}
+
